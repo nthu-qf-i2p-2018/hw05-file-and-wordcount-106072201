@@ -18,7 +18,8 @@ def main(filename):
         words = line.split()
         for word in words: 
             word = word.strip(string.punctuation)
-            if word !=(" "):
+            word = word.strip()
+            if word:
                 all_words.append(word)
     from collections import Counter
     counter = Counter(all_words)
