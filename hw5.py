@@ -25,7 +25,7 @@ def main(filename):
     counter = Counter(all_words)
     with open("wordcount.csv", "w") as csv_file:
         
-        writer = csv.writer(csv_file, delimiter=',')
+        writer = csv.writer(csv_file, lineterminator = '\n')
         writer.writerow(['word', 'count'])
         writer.writerows(counter.most_common())
 
