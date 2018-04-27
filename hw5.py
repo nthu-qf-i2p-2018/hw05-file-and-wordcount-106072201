@@ -18,9 +18,8 @@ def main(filename):
         words = line.split()
         for word in words: 
             word = word.strip(string.punctuation)
-            word = word.strip()
-            if word:
-                all_words.append(word)
+            if word !=(" "):
+                all_words.append(word)   
     from collections import Counter
     counter = Counter(all_words)
     with open("wordcount.csv", "w") as csv_file:
